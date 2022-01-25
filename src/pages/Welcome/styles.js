@@ -42,7 +42,7 @@ export const Left = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24.8rem;
+    font-size: clamp(16.8rem, 5vw, 24.8rem);
   }
 
   @media screen and (max-width: 1024px) {
@@ -52,7 +52,7 @@ export const Left = styled.div`
     margin-right: 0;
 
     .twitter-icon {
-      font-size: 12.4rem;
+      font-size: clamp(6.5rem, 5vw, 12.4rem);
     }
   }
 `;
@@ -63,7 +63,7 @@ export const Right = styled.div`
 
   padding: 2.4rem;
 
-  margin-left: clamp(6rem, 2.5vw, 12rem);
+  margin-left: clamp(6rem, 5vw, 12rem);
 
   h1 {
     font-size: clamp(2rem, 5vw, 10rem);
@@ -85,7 +85,6 @@ export const Right = styled.div`
     order: 1;
     margin-bottom: 1rem;
 
-
     h1 {
       font-size: clamp(4rem, 5vw, 10rem);
     }
@@ -104,7 +103,7 @@ export const Actions = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: clamp(45%, 2.5vw, 75%);
+  width: clamp(60%, 5vw, 85%);
 
   button {
     width: 100%;
