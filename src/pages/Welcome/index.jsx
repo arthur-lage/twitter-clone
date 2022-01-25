@@ -9,7 +9,7 @@ function Welcome() {
     <Container>
       <Main>
         <Left>
-          <FaTwitter className="twitter-icon" color="#fff" fontSize={248} />
+          <FaTwitter className="twitter-icon" color="#fff" />
         </Left>
         <Right>
           <FaTwitter color="#fff" fontSize={42} />

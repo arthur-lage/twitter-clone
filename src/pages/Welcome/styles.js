@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  height: 100vh;
+  min-height: 100vh;
 
   background: #000;
 `;
@@ -19,10 +19,15 @@ export const Main = styled.main`
   width: 100%;
 
   height: 90vh;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: initial;
+  }
 `;
 
 export const Left = styled.div`
-  width: 55vw;
+  width: clamp(55vw, 2.5vw, 65rem);
   height: 100%;
   position: relative;
 
@@ -37,6 +42,18 @@ export const Left = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 24.8rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+    margin-right: 0;
+
+    .twitter-icon {
+      font-size: 12.4rem;
+    }
   }
 `;
 
@@ -45,6 +62,8 @@ export const Right = styled.div`
   flex-direction: column;
 
   padding: 2.4rem;
+
+  margin-left: clamp(6rem, 2.5vw, 12rem);
 
   h1 {
     font-size: clamp(2rem, 5vw, 10rem);
@@ -61,19 +80,37 @@ export const Right = styled.div`
 
     margin-bottom: 3.2rem;
   }
+
+  @media screen and (max-width: 1024px) {
+    order: 1;
+    margin-bottom: 1rem;
+
+
+    h1 {
+      font-size: clamp(4rem, 5vw, 10rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 7.5rem);
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    margin-left: 2rem;
+  }
 `;
 
 export const Actions = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 75%;
+  width: clamp(45%, 2.5vw, 75%);
 
   button {
     width: 100%;
     border: 0;
     border-radius: 50rem;
-    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     padding: 1.5rem 0;
     font-weight: 700;
     cursor: pointer;

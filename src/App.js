@@ -1,10 +1,10 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 import Welcome from './pages/Welcome';
 
 import GlobalStyles from './styles/GlobalStyles'
-
-import { Routes, Route } from 'react-router-dom'
+import './styles/scrollbar.css'
 
 function App() {
   return (

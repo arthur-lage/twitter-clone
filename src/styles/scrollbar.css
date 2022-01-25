@@ -1,0 +1,5 @@
+body {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #d7d7d7 #111;
+}
